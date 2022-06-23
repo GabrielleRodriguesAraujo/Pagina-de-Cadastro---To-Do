@@ -1,0 +1,126 @@
+
+/* O Border-box é utilizado para o padding e margin do projeto não interferir na largura dos nosso elementos. */
+
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    /* O width de 100% ocupará toda a largura horizontal do nosso documento enquanto o min-height é para ocupar 100% da tela */
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(128,93,166);
+    background: linear-gradient(15deg, rgba(128,93,166,1) -34%, rgba(158,119,149,1) 14%, rgba(69,167,170,1) 60%, rgba(71,209,156,1) 100%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.cont-img{
+    display: inline;
+    margin-right: 100px;
+    display:grid
+
+
+
+}
+.container{
+    background-color: #fafafa;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px; 
+    max-width: 100%;
+    overflow: hidden;
+   /* O overflow foi utilizado para deixar as bordas todas as pordas da div, arredondadas. Se deixasse apenas o border-radios, a div de class header, iria sobrepor e não pegaria o radios. */
+}
+
+.header{
+    background-color: #eee;
+    padding: 20px;
+}
+
+.form{
+    padding: 20px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input{
+    border: 2px solid;
+    display: block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control i{
+    position: absolute;
+    top: 45px; 
+    right: 10px;
+    visibility: hidden;
+    /* O hidden esconde o icone de erro */
+}
+
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    visibility: hidden;
+    /* O hidden esconde a mensagem de erro */
+}
+
+.form button{
+    background: rgb(56,84,164);
+    background: linear-gradient(90deg, rgba(56,84,164,1) 0%, rgba(39,192,221,1) 100%);
+    border: 2px solid #0a44eb ;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form button:hover{
+    text-decoration:dotted;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+/* Error and Success */
+
+.form-control.success input{
+    border-color:#2ecc71;
+}
+
+.form-control.error input{
+    border-color:#e74c3c;
+}
+
+.form-control.success i.fa-check-circle{
+    color:#2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color:#e74c3c;
+    visibility: visible;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
